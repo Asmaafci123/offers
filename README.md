@@ -1,6 +1,6 @@
 # spicy
 
-A new Flutter project.
+This is an offers app built with Flutter & Dart, built (and still working on it)
 
 ## Getting Started
 
