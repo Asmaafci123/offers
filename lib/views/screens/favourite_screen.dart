@@ -12,7 +12,7 @@ class FavouriteScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: const Color(0xFFFFFFFF),
         appBar: CustomAppBar(
-          title: 'My Account',
+          title: 'Favourite',
         ),
         body: Padding(
           padding: EdgeInsets.fromLTRB(SizeConfig.defaultSize! * 1.6,
