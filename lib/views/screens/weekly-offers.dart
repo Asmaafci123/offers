@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spicy/utilities/routes.dart';
 import '../../size.dart';
 import '../custom_widgets/item-of-weekly-offers.dart';
 import '../custom_widgets/main-categories-home-page.dart';
@@ -27,7 +28,8 @@ class WeeklyOffersScreen extends StatelessWidget {
                   height: SizeConfig.screenHeight,
                   child: ListView.separated(
                     itemBuilder: (context, index) {
-                      return ItemOfWeeklyOffers();
+                      return ItemOfWeeklyOffers(() => Navigator.of(context)
+                          .pushNamed(AppRoutes.detailsOfProductScreenRoute));
                     },
                     itemCount: 10,
                     separatorBuilder: (BuildContext context, int index) =>

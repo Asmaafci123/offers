@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:spicy/utilities/routes.dart';
 import 'package:spicy/views/custom_widgets/reusable-container-best-offers.dart';
 import '../../size.dart';
-import 'details-of-product.dart';
 import 'descripe-product.dart';
 
 class ItemOfWeeklyOffers extends StatelessWidget {
-  const ItemOfWeeklyOffers({Key? key}) : super(key: key);
+  final VoidCallback onTap;
+  ItemOfWeeklyOffers(this.onTap);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.of(context).pushNamed(AppRoutes.detailsOfProductScreenRoute);
-      },
+      onTap: onTap,
       child: Padding(
         padding: EdgeInsets.fromLTRB(
             SizeConfig.defaultSize! * 1.5, 0, SizeConfig.defaultSize! * 1.5, 0),
@@ -94,12 +91,10 @@ class ItemOfWeeklyOffers extends StatelessWidget {
                                   child: DescribeProduct()),
                               const Spacer(),
                               IconButton(
-                                  // padding: EdgeInsets.all(SizeConfig.defaultSize! * 0.7),
                                   onPressed: () {},
                                   color: const Color(0xFF3AB44E),
                                   icon: const Icon(Icons.share)),
                               IconButton(
-                                // padding: EdgeInsets.all(SizeConfig.defaultSize! * 0.7),
                                 onPressed: () {},
                                 color: const Color(0xFF3AB44E),
                                 icon: Image.asset(

@@ -60,10 +60,8 @@ class _NavDrawerState extends State<NavDrawer> {
                 title: 'Payment Methods',
                 onTap: () {
                   Navigator.pop(context);
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => MyAccountScreen()));
+                  Navigator.of(context)
+                      .pushNamed(AppRoutes.paymentMethodsScreenRoute);
                 }),
             ReusableListTile(
                 imgPath: 'assets/icons/languages.png',

@@ -19,10 +19,8 @@ class LanguagesScreen extends StatelessWidget {
         title: 'Languages',
       ),
       body: Padding(
-        padding: EdgeInsets.only(
-            left: SizeConfig.defaultSize! * 3,
-            right: SizeConfig.defaultSize! * 3,
-            top: SizeConfig.defaultSize! * 3),
+        padding: EdgeInsets.fromLTRB(SizeConfig.defaultSize! * 1.6,
+            SizeConfig.defaultSize! * 1.6, SizeConfig.defaultSize! * 1.6, 0),
         child: Column(
           children: [
             DropDownList(
@@ -30,14 +28,14 @@ class LanguagesScreen extends StatelessWidget {
               hintText: 'Language',
             ),
             SizedBox(
-              height: SizeConfig.defaultSize! * 15,
+              height: SizeConfig.defaultSize! * 10,
             ),
             CustomButton(
-                height: SizeConfig.defaultSize! * 4.5,
                 color: const Color(0xFF3AB44E),
                 text: 'SAVE',
                 textColor: const Color(0xFFFFFFFF),
-                width: SizeConfig.defaultSize! * 36,
+                width: SizeConfig.screenWidth!,
+                height: SizeConfig.defaultSize! * 5,
                 function: () {})
           ],
         ),

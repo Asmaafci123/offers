@@ -36,7 +36,7 @@ class CustomAlertDialog extends StatelessWidget {
             TextButton(
               child: Text(
                 option2,
-                style: const TextStyle(color: Color(0xFF213955)),
+                style: const TextStyle(color: Color(0xFF3AB44E)),
               ),
               onPressed: () {
                 Navigator.of(context).pop();

@@ -15,20 +15,32 @@ class _DropDownListState extends State<DropDownList> {
   Widget build(BuildContext context) {
     return SizedBox(
       height: SizeConfig.defaultSize! * 7,
-      width: SizeConfig.defaultSize! * 36,
+      width: SizeConfig.screenWidth!,
       child: DropdownButtonFormField(
           decoration: InputDecoration(
-              hintText: widget.hintText,
-              enabledBorder: OutlineInputBorder(
-                  borderRadius:
-                      BorderRadius.circular(SizeConfig.defaultSize! * 2),
-                  borderSide:
-                      BorderSide(width: SizeConfig.defaultSize! * 0.03)),
-              focusedBorder: OutlineInputBorder(
-                  borderRadius:
-                      BorderRadius.circular(SizeConfig.defaultSize! * 2),
-                  borderSide:
-                      BorderSide(width: SizeConfig.defaultSize! * 0.03))),
+            hintText: widget.hintText,
+            hintStyle: widget.hintText == 'Visa'
+                ? TextStyle(
+                    color: const Color(0xFF213955),
+                    fontSize: SizeConfig.defaultSize! * 2)
+                : null,
+            enabledBorder: widget.hintText != 'Visa'
+                ? OutlineInputBorder(
+                    borderRadius:
+                        BorderRadius.circular(SizeConfig.defaultSize! * 2),
+                    borderSide:
+                        BorderSide(width: SizeConfig.defaultSize! * 0.03))
+                : UnderlineInputBorder(
+                    borderSide:
+                        BorderSide(width: SizeConfig.defaultSize! * 0.08)),
+            focusedBorder: widget.hintText != 'Visa'
+                ? OutlineInputBorder(
+                    borderRadius:
+                        BorderRadius.circular(SizeConfig.defaultSize! * 2),
+                    borderSide:
+                        BorderSide(width: SizeConfig.defaultSize! * 0.03))
+                : const UnderlineInputBorder(),
+          ),
           icon: const Icon(Icons.keyboard_arrow_down_outlined),
           value: selectedValue,
           items: widget.items.map((value) {

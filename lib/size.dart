@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 class SizeConfig {
@@ -11,7 +9,7 @@ class SizeConfig {
   void init(BuildContext context) {
     screenWidth = MediaQuery.of(context).size.width;
     screenHeight = MediaQuery.of(context).size.height;
-    orientation = MediaQuery.of(context).orientation;//وضع افقى او راسى
+    orientation = MediaQuery.of(context).orientation; //وضع افقى او راسى
 
     defaultSize = orientation == Orientation.landscape
         ? screenHeight! * .024

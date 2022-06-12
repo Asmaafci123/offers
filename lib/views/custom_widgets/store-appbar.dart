@@ -24,16 +24,26 @@ class _StoreAppBarState extends State<StoreAppBar> {
       leadingWidth: SizeConfig.defaultSize! * 5,
       leading: IconButton(
         padding: EdgeInsets.all(SizeConfig.defaultSize! * 0.7),
-        constraints: BoxConstraints(),
+        constraints: const BoxConstraints(),
         onPressed: () {},
-        icon: Icon(
+        icon: const Icon(
           Icons.arrow_back_rounded,
-          color: const Color(0xFF213955),
+          color: Color(0xFF213955),
         ),
         iconSize: SizeConfig.defaultSize! * 2.5,
       ),
       centerTitle: true,
       title: TitleOfAppBar(title: 'Store'),
+      actions: [
+        IconButton(
+          padding: EdgeInsets.all(6),
+          onPressed: () {},
+          icon: const Icon(
+            Icons.search,
+            color: Color(0xFF213955),
+          ),
+        )
+      ],
     );
   }
 }

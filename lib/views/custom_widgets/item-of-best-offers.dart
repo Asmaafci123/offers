@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spicy/utilities/routes.dart';
 import 'package:spicy/views/custom_widgets/reusable-container-best-offers.dart';
-import 'package:spicy/views/custom_widgets/details-of-product.dart';
 import '../../size.dart';
 
 class ItemOfBestOffers extends StatelessWidget {

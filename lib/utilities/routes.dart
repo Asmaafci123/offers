@@ -10,7 +10,10 @@ class AppRoutes {
   static const String favouriteScreenRoute = '/favourite';
   static const String myCardsScreenRoute = '/myCards';
   static const String paymentMethodsScreenRoute = '/paymentMethods';
+  static const String addPaymentMethodScreenRoute = '/contactUs';
   static const String languagesScreenRoute = '/language';
   static const String aboutCompanyScreenRoute = '/aboutCompany';
   static const String contactUsScreenRoute = '/contactUs';
+  static const String detailsOfItemOfStoreScreenRoute = '/detailsOfStore';
+  static const String allBranchesScreenRoute = '/allBranches';
 }
